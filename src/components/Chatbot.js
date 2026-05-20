@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 
 function Chatbot() {
   useEffect(() => {
-    // Load Flowise chatbot script
     const script = document.createElement('script');
     script.type = 'module';
     script.innerHTML = `
@@ -19,6 +18,8 @@ function Chatbot() {
             iconColor: "#0a0a0f",
           },
           chatWindow: {
+            showTitle: true,
+            title: "Richard's Assistant",
             welcomeMessage: "Hi! I'm Richard's AI assistant. Ask me anything about him!",
             backgroundColor: "#111118",
             height: 520,
@@ -37,6 +38,12 @@ function Chatbot() {
               backgroundColor: "#1a1a24",
               textColor: "#e8e8f0",
               sendButtonColor: "#00ff88",
+            },
+            footer: {
+              textColor: "#111118",
+              text: "",
+              company: "",
+              companyLink: "",
             },
           },
         },
