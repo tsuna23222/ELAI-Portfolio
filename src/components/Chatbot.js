@@ -8,8 +8,8 @@ function Chatbot() {
     script.innerHTML = `
       import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
       Chatbot.init({
-        chatflowid: "YOUR_CHATFLOW_ID",
-        apiHost: "https://flowise-production-61a0.up.railway.app",
+        chatflowid: "1336c23f-f1a1-422c-ae0c-30983fc0f020",
+        apiHost: "https://flowise-production-0d82.up.railway.app",
         theme: {
           button: {
             backgroundColor: "#00ff88",
