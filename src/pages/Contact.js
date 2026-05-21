@@ -16,9 +16,9 @@ function Contact() {
   };
 
   const socials = [
-    { label: 'GitHub', icon: '🐙', url: 'https://github.com/', handle: '@richardcasinillo' },
-    { label: 'Facebook', icon: '📘', url: 'https://facebook.com/', handle: 'Richard Casinillo' },
-    { label: 'LinkedIn', icon: '💼', url: 'https://linkedin.com/', handle: 'Richard Casinillo' },
+    { label: 'GitHub', icon: '🐙', url: 'https://github.com/tsuna23222', handle: '@tsuna23222' },
+    { label: 'Facebook', icon: '📘', url: 'https://www.facebook.com/RichardPH11', handle: '@RichardPH11' },
+    { label: 'Twitter / X', icon: '🐦', url: 'https://x.com/richard69605781', handle: '@richard69605781' },
   ];
 
   return (

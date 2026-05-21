@@ -4,9 +4,9 @@ import './Footer.css';
 
 function Footer() {
   const socials = [
-    { label: 'GitHub', icon: '🐙', url: 'https://github.com/' },
-    { label: 'Facebook', icon: '📘', url: 'https://facebook.com/' },
-    { label: 'LinkedIn', icon: '💼', url: 'https://linkedin.com/' },
+    { label: 'GitHub', icon: '🐙', url: 'https://github.com/tsuna23222' },
+    { label: 'Facebook', icon: '📘', url: 'https://www.facebook.com/RichardPH11' },
+    { label: 'Twitter / X', icon: '🐦', url: 'https://x.com/richard69605781' },
   ];
 
   return (
