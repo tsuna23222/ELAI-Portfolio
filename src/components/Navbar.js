@@ -5,12 +5,18 @@ import './Navbar.css';
 function Navbar() {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  const [dark, setDark] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleTheme = () => {
+    setDark(!dark);
+    document.documentElement.classList.toggle('light');
+  };
 
   const links = [
     { path: '/', label: 'Home' },
@@ -38,6 +44,9 @@ function Navbar() {
               {link.label}
             </Link>
           ))}
+          <button className="theme-toggle" onClick={toggleTheme} title="Toggle theme">
+            {dark ? '☀️' : '🌙'}
+          </button>
         </div>
       </div>
     </nav>

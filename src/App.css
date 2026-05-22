@@ -15,6 +15,20 @@
   --card: rgba(255,255,255,0.04);
   --font-display: 'Syne', sans-serif;
   --font-mono: 'Space Mono', monospace;
+  --shadow: rgba(0,0,0,0.3);
+}
+
+/* Light mode */
+:root.light {
+  --bg: #f5f5f7;
+  --bg2: #ffffff;
+  --accent: #00aa55;
+  --accent2: #6d28d9;
+  --text: #111118;
+  --text-muted: #6b7280;
+  --border: rgba(0,0,0,0.1);
+  --card: rgba(0,0,0,0.04);
+  --shadow: rgba(0,0,0,0.1);
 }
 
 body {
@@ -23,13 +37,13 @@ body {
   font-family: var(--font-display);
   min-height: 100vh;
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .app {
   min-height: 100vh;
 }
 
-/* Page transitions */
 .page {
   min-height: 100vh;
   padding: 100px 2rem 4rem;
@@ -43,7 +57,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Noise overlay */
 body::before {
   content: '';
   position: fixed;
@@ -54,7 +67,6 @@ body::before {
   opacity: 0.4;
 }
 
-/* Glow blob */
 .glow-blob {
   position: fixed;
   width: 600px;
@@ -79,7 +91,6 @@ body::before {
   z-index: 0;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent2); border-radius: 2px; }
