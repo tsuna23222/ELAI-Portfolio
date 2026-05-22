@@ -112,7 +112,7 @@ function Chatbot() {
             <button onClick={sendMessage} disabled={loading}>➤</button>
           </div>
 
-          <div className="chat-footer">Powered by Richard A. Casinillo Jr</div>
+          <div className="chat-footer">Powered by <span className="chat-footer-link" onClick={() => { navigate('/'); setOpen(false); }}>Richard A. Casinillo Jr</span></div>
         </div>
       )}
     </>
