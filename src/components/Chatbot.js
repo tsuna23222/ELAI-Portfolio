@@ -3,17 +3,18 @@ import { useNavigate } from 'react-router-dom';
 import './Chatbot.css';
 
 const navMap = [
-  { keywords: ['about', 'profile', 'who is', 'background', 'bio', 'education'], path: '/about' },
-  { keywords: ['project', 'work', 'portfolio', 'game', 'roblox', 'built'], path: '/projects' },
-  { keywords: ['contact', 'reach', 'email', 'message', 'hire'], path: '/contact' },
-  { keywords: ['home', 'main', 'start'], path: '/' },
+  { keywords: ['go to about', 'about page', 'navigate to about', 'show about'], path: '/about', label: 'About' },
+  { keywords: ['go to project', 'project page', 'navigate to project', 'show project'], path: '/projects', label: 'Projects' },
+  { keywords: ['go to game', 'games page', 'navigate to game', 'show games', 'game created'], path: '/games', label: 'Games' },
+  { keywords: ['go to contact', 'contact page', 'navigate to contact', 'show contact'], path: '/contact', label: 'Contact' },
+  { keywords: ['go home', 'home page', 'go to home', 'main page'], path: '/', label: 'Home' },
 ];
 
 function detectNav(text) {
   const lower = text.toLowerCase();
   for (const route of navMap) {
     if (route.keywords.some(kw => lower.includes(kw))) {
-      return route.path;
+      return route;
     }
   }
   return null;
@@ -22,7 +23,7 @@ function detectNav(text) {
 function Chatbot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { role: 'bot', text: "Hi! I'm Richard's AI assistant. Ask me anything or say 'go to about page' to navigate!" }
+    { role: 'bot', text: "Hi! I'm Richard's AI assistant. Ask me anything or say 'go to games page' to navigate!" }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -38,11 +39,20 @@ function Chatbot() {
     const userText = input.trim();
     setInput('');
     setMessages(prev => [...prev, { role: 'user', text: userText }]);
+
+    // Check navigation intent FIRST before anything else
+    const navRoute = detectNav(userText);
+    if (navRoute) {
+      setMessages(prev => [...prev, {
+        role: 'bot',
+        text: `Sure! Taking you to the ${navRoute.label} page now... 🚀`
+      }]);
+      setTimeout(() => navigate(navRoute.path), 800);
+      return;
+    }
+
+    // No navigation — call Flowise API
     setLoading(true);
-
-    // Check navigation intent
-    const navPath = detectNav(userText);
-
     try {
       const res = await fetch(
         'https://flowise-production-0d82.up.railway.app/api/v1/prediction/1336c23f-f1a1-422c-ae0c-30983fc0f020',
@@ -55,15 +65,9 @@ function Chatbot() {
       const data = await res.json();
       const botReply = data.text || data.answer || "I'm not sure, try asking something else!";
       setMessages(prev => [...prev, { role: 'bot', text: botReply }]);
-
-      if (navPath) {
-        setMessages(prev => [...prev, { role: 'bot', text: `Navigating you there now... 🚀` }]);
-        setTimeout(() => navigate(navPath), 1000);
-      }
     } catch (err) {
       setMessages(prev => [...prev, { role: 'bot', text: "Oops! Something went wrong. Please try again." }]);
     }
-
     setLoading(false);
   };
 
@@ -73,12 +77,10 @@ function Chatbot() {
 
   return (
     <>
-      {/* Chat button */}
       <button className="chat-fab" onClick={() => setOpen(!open)}>
         {open ? '✕' : '💬'}
       </button>
 
-      {/* Chat window */}
       {open && (
         <div className="chat-window">
           <div className="chat-header">
@@ -94,9 +96,7 @@ function Chatbot() {
             ))}
             {loading && (
               <div className="chat-msg bot typing">
-                <span />
-                <span />
-                <span />
+                <span /><span /><span />
               </div>
             )}
             <div ref={bottomRef} />
