@@ -203,3 +203,55 @@
 @keyframes cellFadeIn {
   to { opacity: 1; }
 }
+
+/* Photo section */
+.home-photo-wrapper {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home-photo-ring {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,255,136,0.2);
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.home-photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 40px rgba(0,255,136,0.2);
+}
+
+.home-photo-badge {
+  background: rgba(0,255,136,0.1);
+  border: 1px solid rgba(0,255,136,0.25);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 6px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 900px) {
+  .home-photo-wrapper { display: none; }
+}

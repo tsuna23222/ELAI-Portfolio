@@ -23,7 +23,7 @@ function About() {
         <div className="about-bio">
           <div className="bio-card">
             <div className="bio-avatar">
-              <span>RC</span>
+              <img src="/richard.jpg" alt="Richard Casinillo" />
             </div>
             <div className="bio-info">
               <h2>Richard Casinillo</h2>

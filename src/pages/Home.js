@@ -51,10 +51,10 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-grid-decoration">
-        {[...Array(12)].map((_, i) => (
-          <div key={i} className="grid-cell" style={{ animationDelay: `${i * 0.1}s` }} />
-        ))}
+      <div className="home-photo-wrapper">
+        <div className="home-photo-ring" />
+        <img src="/richard.jpg" alt="Richard Casinillo" className="home-photo" />
+        <div className="home-photo-badge">🏆 Season 4 Champions</div>
       </div>
     </div>
   );
