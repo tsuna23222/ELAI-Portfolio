@@ -167,3 +167,15 @@
   font-family: 'Space Mono', monospace;
   border-top: 1px solid rgba(255,255,255,0.04);
 }
+
+.chat-footer-link {
+  color: var(--accent, #00ff88);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.chat-footer-link:hover {
+  opacity: 0.75;
+}
