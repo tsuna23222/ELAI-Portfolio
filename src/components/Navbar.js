@@ -16,6 +16,7 @@ function Navbar() {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/projects', label: 'Projects' },
+    { path: '/games', label: 'Games' },
     { path: '/contact', label: 'Contact' },
   ];
 
