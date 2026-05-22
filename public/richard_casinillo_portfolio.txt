@@ -1,0 +1,105 @@
+PERSONAL PORTFOLIO - RICHARD CASINILLO
+=======================================
+
+PERSONAL INFORMATION
+---------------------
+Name: Richard A. Casinillo Jr
+School: University of Cebu
+Course: Bachelor of Science in Information Technology (BSIT)
+Location: Cebu, Philippines
+GitHub: https://github.com/tsuna23222
+Facebook: https://www.facebook.com/RichardPH11
+Twitter/X: https://x.com/richard69605781
+
+ABOUT ME
+--------
+I am Richard A. Casinillo Jr, a BS Information Technology student at the University of Cebu. 
+I am passionate about technology, game development, and artificial intelligence. 
+I enjoy creating Roblox games using Lua scripting and exploring the world of AI and prompt engineering.
+
+SKILLS
+------
+- Basic Programming
+- Lua Scripting (Roblox Game Development)
+- AI Prompt Engineering (beginner)
+- Roblox Studio
+- Game Design and Development
+- React.js (Web Development)
+
+GAMES CREATED
+-------------
+1. Sword Fight Until Death
+   - A fast-paced multiplayer sword fighting PvP game
+   - Features a shop system with multiple weapons: Rocket Launcher, EpicKatana, Seer sword
+   - Players battle each other until only one survives
+   - Status: Published
+   - Platform: Roblox
+   - Developer: tsuna23222
+
+2. Pisitol ALL OUT BattleROYALE!!!
+   - A pistol-only battle royale game with open world map
+   - Features a perk system (Perk 1, 2, 3) and multiple gun variants like the Desert Eagle
+   - First-person shooting gameplay with health system
+   - Status: Published
+   - Platform: Roblox
+   - Developer: tsuna23222
+
+3. Basic Obby!!!
+   - A colorful obstacle course (obby) game with multiple stages
+   - Features power-ups: SpeedCoil, Magic Carpet, Skip A Stage
+   - Fun and accessible gameplay for all players
+   - Status: Private
+   - Platform: Roblox
+   - Developer: tsuna23222
+
+PROJECTS
+--------
+1. Roblox Games
+   - Developed 3 Roblox games using Lua scripting language
+   - Designed game mechanics, shop systems, and environments using Roblox Studio
+
+2. AI Prompt Engineering
+   - Exploring AI language models through creative prompt engineering
+   - Developing skills in crafting effective prompts for various AI applications
+
+3. Portfolio Chatbot (RAG)
+   - Built a Retrieval-Augmented Generation chatbot using Flowise and Google Gemini API
+   - The chatbot answers questions about Richard and navigates visitors to relevant pages
+   - Deployed on Railway cloud platform
+
+EDUCATION
+---------
+Degree: Bachelor of Science in Information Technology
+School: University of Cebu
+Status: Currently Enrolled
+
+WEBSITE PAGES
+-------------
+- Home page: Main landing page
+- About page: Background, skills, and personal info
+- Projects page: All projects and work
+- Games page: Roblox games created by Richard
+- Contact page: Contact info and message form
+
+ACHIEVEMENTS
+------------
+- Season 4 Champions - CESAFI Esports League Valorant
+  Richard is a champion of the CESAFI (Cebu Schools Athletic Foundation Inc.) Esports League
+  in the Valorant category, Season 4. He is part of the University of Cebu team that won the championship.
+
+INTERESTS
+---------
+- Game Development (Roblox)
+- Artificial Intelligence
+- Prompt Engineering
+- Programming
+- Web Development
+
+CONTACT
+-------
+Name: Richard A. Casinillo Jr
+School: University of Cebu
+Course: BSIT
+GitHub: github.com/tsuna23222
+Facebook: facebook.com/RichardPH11
+Twitter: x.com/richard69605781
