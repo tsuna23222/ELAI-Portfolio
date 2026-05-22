@@ -73,7 +73,7 @@
 .bio-text {
   font-size: 0.95rem;
   line-height: 1.8;
-  color: rgba(232, 232, 240, 0.75);
+  color: var(--text-muted);
   margin-bottom: 1.2rem;
 }
 
