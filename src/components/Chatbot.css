@@ -172,7 +172,7 @@
   color: var(--accent, #00ff88);
   font-weight: 700;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
